@@ -46,8 +46,23 @@ Character escapes are identified through the use of . They are a necessary addit
 
 ### Flags
 
-### Character Escapes
+Flags can change how the expression is interpreted. Flags follow the closing forward slash of the expression.
 
+Please see below for the common example of flags:
+
+i ignore case: make the entire expression case-sensitive.
+g global search: store the index of the last match.
+m multiline: cause the beginning and end anchors to match the start and end of a line instead of the whole string.
+s dotall: causes dot(.) to match any character.
+y sticky: will only match from its last index position and ignores the global search flag.
+Character Escapes
+
+### Character Escapes
+The backslash in regex escapes a character. For example, in this tutorial, \. is used to separate the email host name and domain. The reason for this is because dot(.) will be interpreted as character class where it will try to match any character except line breaks as I mentioned in Character Classes section. Because of this, you want to add backslash () to avoid that happening.
+
+Regex for an email: /^([a-z0-9_.-]+)@([\da-z.-]+).([a-z.]{2,6})$/.
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+My name is rammohan and I am currently a student at adelaide Coding Bootcamp. Feel free to contact me via the following methods:
+
+github :https://github.com/rammohanmiryala/email_verification.git 
